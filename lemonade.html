@@ -20,15 +20,14 @@
         --primary-color: black;
         --secondary-color: rgb(100, 100, 100);
         --background-color: white;
+        --body-color: rgb(240, 240, 240);
         font-size: 16px;
     }
 
     body {
         min-height: 100vh;
         margin: 0;
-        background-image: url('./bg.png');
-        backdrop-filter: blur(0.6rem);
-        filter: hue-rotate(300deg);
+        background-color: var(--body-color);
     }
 
     section {
@@ -39,11 +38,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 4rem;
     }
 
     section>div {
         width: calc(100% - 5rem);
         margin: 0 1rem;
+    }
+
+    section>div>div {
         border-left: 0.6rem solid black;
         padding-left: 1rem;
         border-right: 0.6rem solid black;
@@ -52,13 +55,6 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         background-color: var(--background-color);
-    }
-
-    @media (min-width: 600px) {
-        section>div {
-            width: 30rem;
-            margin: 0;
-        }
     }
 
     h1 {
@@ -126,54 +122,83 @@
         gap: 0.5rem;
         justify-content: flex-start;
     }
+
+    img {
+        width: calc(100% - 2rem);
+        border-radius: 0.5rem;
+        border: 1px solid var(--secondary-color);
+    }
+
+    @media (min-width: 1140px) {
+        section {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        section>div,
+        img {
+            height: auto;
+        }
+    }
+
+    @media (min-width: 34rem) {
+        section>div {
+            width: 30rem;
+            margin: 0;
+        }
+
+        img {
+            width: 30rem;
+            margin: 0;
+        }
+    }
 </style>
 
 <body>
     <section>
         <div>
-            <h1>VITAMIN</h1>
-            <h1>WELL</h1>
-            <h1 style="color: black">RELOAD</h1>
-            <hr>
-            <h2>VITAMINAS B+D</h2>
-            <h2>MAGNESIO+ZINC</h2>
-            <h3>CON SABOR A</h3>
-            <h2>LIMÓN/LIMA</h2>
-            <hr>
-            <h3>CUANDO NECESITAS RECARGAR</h3>
-            <p lang="es">Vitamin Well Reload contiene magnesio, que contribuye al equilibrio de los electrolitos y B12,
-                que ayuda
-                a regular el metabolismo energético. Reload también contiene vitamina D, que favorece el mantenimiento
-                de un funcionamiento muscular normal, y zinc, que contribuye al funcionamiento normal del sistema
-                inmunitario.</p>
-            <p lang="es">Para conseguir estos beneficios se debe consumir una botella al día. Vitamin Well es una bebida
-                sin gas
-                baja en calorías, sin conservadores. La mejor manera de tomarla es fría. Recomendamos seguir una dieta
-                variada y equilibrada y un estilo de vida saludable.</p>
-            <p>Consumir preferentemente antes de: ver el cuello de la botella.</p>
-            <hr>
-            <div class="row-flex">
-                <div class="box">
-                    <h3>LOW CALORIE DRINK</h3>
+            <div>
+                <h1>VITAMIN</h1>
+                <h1>WELL</h1>
+                <h1 style="color: black">RELOAD</h1>
+                <hr>
+                <h2>VITAMINAS B+D</h2>
+                <h2>MAGNESIO+ZINC</h2>
+                <h3>CON SABOR A</h3>
+                <h2>LIMÓN/LIMA</h2>
+                <hr>
+                <h3>CUANDO NECESITAS RECARGAR</h3>
+                <p lang="es">Vitamin Well Reload contiene magnesio, que contribuye al equilibrio de los electrolitos y
+                    B12,
+                    que ayuda
+                    a regular el metabolismo energético. Reload también contiene vitamina D, que favorece el
+                    mantenimiento
+                    de un funcionamiento muscular normal, y zinc, que contribuye al funcionamiento normal del sistema
+                    inmunitario.</p>
+                <p lang="es">Para conseguir estos beneficios se debe consumir una botella al día. Vitamin Well es una
+                    bebida
+                    sin gas
+                    baja en calorías, sin conservadores. La mejor manera de tomarla es fría. Recomendamos seguir una
+                    dieta
+                    variada y equilibrada y un estilo de vida saludable.</p>
+                <p>Consumir preferentemente antes de: ver el cuello de la botella.</p>
+                <hr>
+                <div class="row-flex">
+                    <div class="box">
+                        <h3>LOW CALORIE DRINK</h3>
+                    </div>
+                    <p lang="es"><b>Bebida refrescante aromatizada</b> 500ml. Una vez abierta, consumir en el mismo día.
+                        Se
+                        puede
+                        guardar a temperatura ambiente, pero debe mantenerse dejada de la luz solar directa. Vitamin
+                        Drinks
+                        S.L,
+                        C/ Calle de Goya 24, 4izq, 28001, Madrid, info@vitamindrinks.es, vitaminwell.es</p>
                 </div>
-                <p lang="es"><b>Bebida refrescante aromatizada</b> 500ml. Una vez abierta, consumir en el mismo día. Se
-                    puede
-                    guardar a temperatura ambiente, pero debe mantenerse dejada de la luz solar directa. Vitamin Drinks
-                    S.L,
-                    C/ Calle de Goya 24, 4izq, 28001, Madrid, info@vitamindrinks.es, vitaminwell.es</p>
             </div>
-            <hr>
-            <h3>当你需要充电时</h3>
-            <p>
-                Vitamin Well Reload含有镁，有助于维持电解质平衡，以及维生素B12，有助于调节能量代谢。Reload还含有维生素D，有助于维持正常的肌肉功能，以及锌，有助于维持免疫系统的正常功能。
-            </p>
-            <p>
-                为了获得这些益处，建议每天饮用一瓶。Vitamin Well是一种低卡路里、不含气、不含防腐剂的饮料。最佳饮用方式是冰镇后饮用。我们建议保持均衡多样的饮食和健康的生活方式。
-            </p>
-            <p>
-                优先在瓶颈处标注的日期前饮用。
-            </p>
         </div>
+        <img src="photo.jpg" alt="lemonade">
     </section>
 </body>
 
