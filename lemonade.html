@@ -8,6 +8,7 @@
     Favicon icon by Author Name from https://game-icons.net/
     Licensed under CC BY 3.0
     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
@@ -23,6 +24,7 @@
     }
 
     body {
+        min-height: 100vh;
         margin: 0;
         background-image: url('./bg.png');
         backdrop-filter: blur(0.6rem);
@@ -30,7 +32,7 @@
     }
 
     section {
-        height: 100%;
+        height: calc(100% - 9rem);
         width: 100%;
         padding-top: 6rem;
         padding-bottom: 3rem;
@@ -40,7 +42,8 @@
     }
 
     section>div {
-        width: 30rem;
+        width: calc(100% - 5rem);
+        margin: 0 1rem;
         border-left: 0.6rem solid black;
         padding-left: 1rem;
         border-right: 0.6rem solid black;
@@ -49,6 +52,13 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         background-color: var(--background-color);
+    }
+
+    @media (min-width: 600px) {
+        section>div {
+            width: 30rem;
+            margin: 0;
+        }
     }
 
     h1 {
